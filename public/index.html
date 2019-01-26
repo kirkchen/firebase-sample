@@ -17,6 +17,9 @@
         margin: auto 0;
         float: left;
       }
+      #product-list li img {
+        width: 200px;
+      }
     </style>
 </head>
 <body>
@@ -28,6 +31,7 @@
     <script id="product-item" type="text/x-jsrender">
       {{props}}
       <li>
+        <img src="{{:prop.url}}" />
         <p>
           <a href="product.html?id={{>key}}">
           {{:prop.title}}

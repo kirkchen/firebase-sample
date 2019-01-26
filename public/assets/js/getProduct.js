@@ -9,6 +9,7 @@ $(function() {
     $("#price").text(product.price);
     $("#count").text(product.count);
     $("#description").text(product.description);
+    $("#picture").attr('src', product.url);
 
     $addToCart = $("#add-to-cart");
     $soldout = $("#soldout");
