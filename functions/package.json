@@ -9,8 +9,12 @@
     "logs": "firebase functions:log"
   },
   "dependencies": {
+    "buffer": "^5.2.1",
+    "elementtree": "^0.1.7",
+    "express": "^4.16.4",
     "firebase-admin": "~6.0.0",
-    "firebase-functions": "^2.1.0"
+    "firebase-functions": "^2.1.0",
+    "iconv-lite": "^0.4.24"
   },
   "engines": {
     "node": "8"
