@@ -3,7 +3,7 @@ const app = express();
 const opay_payment = require("./lib/opay_payment_nodejs");
 const uuid = require("uuid/v4");
 
-app.get("/ping", (req, res) => res.send("pong"));
+app.get("/api/ping", (req, res) => res.send("pong"));
 
 app.get("/pay", (req, res) => {
   let base_param = {

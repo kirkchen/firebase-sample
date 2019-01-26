@@ -5,7 +5,11 @@
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
-    ]
+    ],
+    "rewrites": [{
+      "source": "/api/**", 
+      "function": "main"
+    }]
   },
   "storage": {
     "rules": "storage.rules"
