@@ -1,12 +1,13 @@
 const express = require("express");
 const app = express();
 const opay_payment = require("./lib/opay_payment_nodejs");
+const uuid = require("uuid/v4");
 
 app.get("/ping", (req, res) => res.send("pong"));
 
 app.get("/pay", (req, res) => {
   let base_param = {
-    MerchantTradeNo: "7TszqxDmVB3jw6HJsP2D", //請帶20碼uid, ex: f0a0d7e9fae1bb72bc93
+    MerchantTradeNo: uuid().replace(/\-/g, '').substr(0, 19), //請帶20碼uid, ex: f0a0d7e9fae1bb72bc93
     MerchantTradeDate: "2017/02/13 15:45:30", //ex: 2017/02/13 15:45:30
     TotalAmount: "100",
     TradeDesc: "測試交易描述",
